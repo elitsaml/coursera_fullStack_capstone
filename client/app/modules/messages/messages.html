@@ -1,0 +1,63 @@
+
+
+<div>
+    <ul class="breadcrumb">
+        <li><a ui-sref="app">Home</a>
+        </li>
+        <li class="active">Messages</li>
+    </ul>
+</div>
+
+  <div class="conteiner">
+    <div class="content_conteiner">
+
+        <h2 id="installation">Messages</h2>
+
+        <div class="row">
+          <div class="box col-md-12">
+              <div class="box-inner">
+
+                  <table class="table table-hover table-cursor-pointer table-striped table-bordered table-condensed table-checkable table-highlight-head footable"
+                         wt-responsive-table>
+                      <thead>
+                              <tr >
+                                <th>Message</th>
+                                <th>from</th>
+                                <th></th>
+                              </tr>
+                      </thead>
+                      <tbody>
+                            <tr  ng-repeat="msg in vm.messages">
+                                <td>{{msg.content}}</td>
+                                <td>{{msg.from}}</td>
+                                <td class="center col-md-2">
+                                    <a class="btn btn-danger btn-sm" ng-click="vm.delete( msg)">
+                                        <i class="glyphicon glyphicon-trash icon-white"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
+                      </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-10">
+              <input class="form-control" type="text" ng-model="vm.newMsgContent" my-label="newMsgContent"
+                 name="newMsgContent" placeholder="Type the message content here" >
+              </input>
+            </div>
+            <div class="col-md-2">
+                <a class="btn btn-success btn-lg pull-right" ng-click="vm.newMessage()">
+                    <i class="glyphicon glyphicon-plus icon-white"></i> Post
+                </a>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+  </div>

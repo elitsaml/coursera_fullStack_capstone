@@ -1,0 +1,97 @@
+<!-- Start coding here -->
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <img class="menu-brand" src="../assets/img/Sunflower-family-clip-art.png" alt="Chania">
+        <a class="navbar-brand title-brand" ui-sref="app"> <!--Verein für<br>Familiengärten<br>Schaffhausen-->
+          Sociaty<br>for<br>Gardening
+        </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li ng-class="{active: vm.stateis('app')}"><a ui-sref="app">Home</a></li>
+
+            <!--
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">Verein <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a ui-sref="app.organization">Organigram</a></li>
+                    <li><a href="#">Geschichte</a></li>
+                    <li><a href="#">Arialen</a></li>
+                    <li><a href="#">Statuten</a></li>
+                    <li><a href="#">Mietglidverden</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Termine <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aktuelles <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bilder <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Links</a></li>
+            -->
+
+            <li ng-if="vm.loggedIn" ng-class="{active: vm.stateis('app.people')}"><a ui-sref="app.people">People</a></li>
+            <li ng-if="vm.loggedIn" ng-class="{active: vm.stateis('app.plots')}"><a ui-sref="app.plots">Plots</a></li>
+            <li ng-if="vm.loggedIn" ng-class="{active: vm.stateis('app.subscriptions')}"><a ui-sref="app.subscriptions">Subscriptions</a></li>
+            <li ng-if="vm.loggedIn" ng-class="{active: vm.stateis('app.messages')}"><a ui-sref="app.messages">Messages</a></li>
+
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+            <li ng-if="!vm.loggedIn"><a ng-click="vm.openLogin()">
+                  <span class="glyphicon glyphicon-log-in"></span> Login</a>
+            </li>
+
+            <li class="dropdown" ng-if="vm.loggedIn">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">{{vm.username}} <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a ui-sref="app.people.currentpersonprofile">Profile</a></li>
+                    <li><a ui-sref="app.people.currentpersonsubscription">Subscriptions</a></li>
+                    <li>
+                      <a ng-click="vm.logOut()"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+
+<!-- breadcrumbs
+<ol class="breadcrumb">
+    <li class="active">Home</li>
+</ol>
+-->
+<!-- / breadcrumbs -->

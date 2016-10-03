@@ -1,0 +1,123 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schrebegarten Schaffhausen">
+    <meta name="author" content="Elitsa Mladenova">
+
+    <title>Schrebegarten</title>
+
+    <link rel="apple-touch-icon" href="./assets/img/Sunflower-family-clip-art.png">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" media="screen" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-theme-garten.css">
+
+    <link href="./bower_components/jquery-ui/themes/base/jquery-ui.min.css" type="text/css" rel="stylesheet" media="all">
+    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./bower_components/ng-dialog/css/ngDialog.min.css" rel="stylesheet">
+    <link href="./bower_components/ng-dialog/css/ngDialog-theme-plain.min.css" rel="stylesheet">
+    <link href="./bower_components/ng-dialog/css/ngDialog-theme-default.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./bower_components/angular-responsive-tables/release/angular-responsive-tables.min.css">
+    <link rel="stylesheet" href="./bower_components/AngularJS-Toaster/toaster.css" />
+    <link rel="stylesheet" href="./bower_components/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="./bower_components/ladda-bootstrap/dist/ladda-themeless.css" />
+    <link rel="stylesheet" href="./bower_components/bootstrap-social/bootstrap-social.css" />
+
+
+    <! -- WE ASSUME YOU ARE USING A main.css FOR CSS CUSTOMIZATION -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <! -- DOWNLOAD LAST VERSION IN http://modernizr.com/ -->
+    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+
+
+</head>
+
+<body  ng-app="communityGardenApp" ng-strict-di>
+    <!--[if IE]>
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <div ui-view="header"></div>
+
+    <div ui-view="content"></div>
+
+    <div ui-view="footer"></div>
+
+
+  <toaster-container toaster-options="{'time-out': 1500, 'close-button':false, 'animation-class': 'toast-top-center', 'debug': true}"></toaster-container>
+
+
+    <script data-cfasync="false" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script data-cfasync="false" src="./bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script data-cfasync="false" src="./bower_components/parallax.js/parallax.min.js"></script>
+    <script>
+         $(function(){
+           if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+             $('#ios-notice').removeClass('hidden');
+             $('.parallax-container').height( $(window).height() * 0.5 | 0 );
+           } else {
+             $(window).resize(function(){
+               var parallaxHeight = Math.max($(window).height() * 0.7, 200) | 0;
+               $('.parallax-container').height(parallaxHeight);
+             }).trigger('resize');
+           }
+         });
+       </script>
+
+    <script src="./bower_components/angular/angular.js" charset="utf-8"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="./bower_components/angular-resource/angular-resource.js"></script>
+    <script src="./bower_components/ng-dialog/js/ngDialog.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-responsive-tables/release/angular-responsive-tables.min.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="./bower_components/AngularJS-Toaster/toaster.js"></script>
+    <script data-cfasync="false" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./bower_components/ladda-bootstrap/dist/ladda.js"></script>
+
+    <!-- TODO: this has to go with gulp or grunt automated -->
+    <script src="./app/app.module.js"></script>
+    <script src="./app/app.core.module.js"></script>
+    <!-- SERVICES -->
+    <script src="./app/services/local_storage.js"></script>
+    <script src="./app/services/auth.js"></script>
+    <script src="./app/services/roleService.js"></script>
+    <script src="./app/services/people.js"></script>
+    <script src="./app/services/plotService.js"></script>
+    <script src="./app/services/subscriptionService.js"></script>
+    <script src="./app/services/messageService.js"></script>
+
+   <!--  <script src="./app/modules/home/home.module.js"></script>-->
+   <script src="./app/modules/layout/header.controller.js"></script>
+   <script src="./app/modules/layout/login.controller.js"></script>
+   <script src="./app/modules/layout/register.controller.js"></script>
+   <script src="./app/modules/layout/home.controller.js"></script>
+   <script src="./app/modules/people/people.controller.js"></script>
+   <script src="./app/modules/people/person.controller.js"></script>
+   <script src="./app/modules/plots/plots.controller.js"></script>
+   <script src="./app/modules/plots/plotEdit.controller.js"></script>
+   <script src="./app/modules/subscriptions/subscriptions.controller.js"></script>
+   <script src="./app/modules/subscriptions/subscriptionEdit.controller.js"></script>
+   <script src="./app/modules/messages/messages.controller.js"></script>
+
+
+</body>
+
+</html>

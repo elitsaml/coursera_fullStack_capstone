@@ -1,0 +1,69 @@
+
+
+<div>
+    <ul class="breadcrumb">
+        <li><a ui-sref="app">Home</a>
+        </li>
+        <li class="active">Subscriptions</li>
+    </ul>
+</div>
+
+  <div class="conteiner">
+    <div class="content_conteiner">
+
+        <h2 id="installation">Subscriptions</h2>
+
+        <div class="row">
+          <div class="box col-md-12">
+              <div class="box-inner">
+
+                  <table class="table table-hover table-cursor-pointer table-striped table-bordered table-condensed table-checkable table-highlight-head footable"
+                         wt-responsive-table>
+                      <thead>
+                              <tr >
+                                <th>Registry Number</th>
+                                <th>Comment</th>
+                                <th>From</th>
+                                <th>Fee</th>
+                                <th>Approved</th>
+                                <th>Paid on</th>
+                                <th></th>
+                              </tr>
+                      </thead>
+                      <tbody>
+                            <tr  ng-repeat="sub in vm.subscriptions">
+                                <td>{{sub.contractRegistryId}}</td>
+                                <td>{{sub.comment}}</td>
+                                <td>{{sub.from | date:'yyyy MMMM dd'}}</td>
+                                <td>{{sub.fee}} CHF</td>
+                                <td>{{sub.approvedOn | date:'yyyy MMMM dd'}}</td>
+                                <td>{{sub.paidOn | date:'yyyy MMMM dd'}}</td>
+                                <td class="center col-md-2">
+                                  <!--
+                                    <a class="btn btn-info btn-sm" ui-sref="app.subscriptions({ pId: sub.id})">
+                                        <i class="glyphicon glyphicon-edit icon-white"></i> Edit
+                                    </a>
+                                  -->
+                                    <a class="btn btn-danger btn-sm" ng-click="vm.deleteCurrentPersonSubscription( sub)">
+                                        <i class="glyphicon glyphicon-trash icon-white"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
+                      </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-success btn-lg pull-right" ui-sref="app.people.subscription({})">
+                    <i class="glyphicon glyphicon-plus icon-white"></i> New Subscription
+                </a>
+        </div>
+
+
+
+
+    </div>
+  </div>

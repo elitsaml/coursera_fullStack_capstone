@@ -1,0 +1,56 @@
+<div>
+    <ul class="breadcrumb">
+        <li><a ui-sref="app">Home</a></li>
+        <li><a ui-sref="app.people">People</a></li>
+        <li class="active">{{vm.person.firstname}} {{vm.person.lastname}}</li>
+    </ul>
+</div>
+
+<div class="conteiner">
+  <div class="content_conteiner">
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+     <h3 class="panel-title">User Profile</h3>
+   </div>
+   <div class="panel-body">
+
+     <form name="vm.profileForm" id="profileForm" novalidate>
+
+            <div class="form-group col-md-6">
+                <label class="control-label">First Name</label>
+                <input class="form-control" type="text" ng-model="vm.person.firstname" my-label="First Name"
+                  required="true" name="firstname" placeholder="Provide the you first name" >
+                </input>
+            </div>
+            <div class="form-group col-md-6">
+                <label class="control-label">Last Name</label>
+                <input class="form-control" type="text" ng-model="vm.person.lastname" my-label="Last Name"
+                  required="true" name="lastname" placeholder="Provide the you family name" >
+                </input>
+            </div>
+            <div class="form-group col-md-12">
+                <label class="control-label">Email</label>
+                <input class="form-control" type="email" ng-model="vm.person.email" my-label="Email"
+                  required="true" name="email" placeholder="Provide the you email" >
+                </input>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="saveBtn" class="btn btn-primary pull-right ladda-button" ng-click="vm.savePersonProfile()" data-style="expand-left">
+                        <span class="ladda-label"> Speichern </span>
+                    </button>
+                    <button id="cancel" class="btn btn-danger pull-right ladda-button" ui-sref="app" data-style="expand-left">
+                        <span class="ladda-label"> Abbrechen</span>
+                    </button>
+                </div>
+            </div>
+
+
+    </form>
+  </div> <!-- pannel body -->
+
+  </div>
+ </div>
+</div>

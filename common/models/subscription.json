@@ -1,0 +1,64 @@
+{
+  "name": "Subscription",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "from": {
+      "type": "date",
+      "required": true
+    },
+    "to": {
+      "type": "date"
+    },
+    "paidOn": {
+      "type": "date"
+    },
+    "paymentReminder1SendOn": {
+      "type": "date"
+    },
+    "paymentReminder2SendOn": {
+      "type": "date"
+    },
+    "contractRegistryId": {
+      "type": "string"
+    },
+    "approvedOn": {
+      "type": "date"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "fee": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "people": {
+      "type": "hasAndBelongsToMany",
+      "model": "Person",
+      "foreignKey": "personId"
+    },
+    "plots": {
+      "type": "hasMany",
+      "model": "plot",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

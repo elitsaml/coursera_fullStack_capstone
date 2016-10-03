@@ -1,0 +1,101 @@
+<div>
+    <ul class="breadcrumb">
+        <li><a ui-sref="app">Home</a>
+        </li>
+        <li><a ui-sref="app.plots">Plots</a>
+        </li>
+        <li class="active">{{vm.plot.registryNumber}}</li>
+    </ul>
+</div>
+
+<div class="conteiner">
+  <div class="content_conteiner">
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+     <h3 class="panel-title">Subscription data</h3>
+   </div>
+   <div class="panel-body">
+
+     <form name="vm.sForm" id="sForm" novalidate>
+
+
+            <div class="form-group col-md-8">
+                <label class="control-label">Registry Id</label>
+                <input class="form-control" type="text" ng-model="vm.subscription.contractRegistryId" my-label="contractRegistryId"
+                  name="contractRegistryId" >
+                </input>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label class="control-label">Fee</label>
+                <input class="form-control" type="number" ng-model="vm.subscription.fee" my-label="Fee"
+                  required="true" name="registryNumber">
+                </input>
+            </div>
+
+            <div class="form-group col-md-12">
+                <label class="control-label">Comment</label>
+                <input class="form-control" type="text" ng-model="vm.subscription.comment" my-label="Comment"
+                  name="comment" >
+                </input>
+            </div>
+
+
+            <div class="form-group col-md-4">
+                <label class="control-label">Valid from</label>
+                <input class="form-control" type="text" ng-model="vm.subscription.from" my-label="from"
+                  required="true" name="from" >
+                </input>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label">Valid till</label>
+                <input class="form-control" type="text" ng-model="vm.subscription.to" my-label="to"
+                   name="to" >
+                </input>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label">Approved on</label>
+                <input class="form-control" type="text" ng-model="vm.subscription.approvedOn" my-label="approvedOn"
+                   name="approvedOn" >
+                </input>
+            </div>
+
+
+            <div class="form-group col-md-4">
+                <label class="control-label">Paid on</label>
+                <input class="form-control" type="text" ng-model="vm.subscription.paidOn" my-label="paidOn"
+                   name="paidOn" >
+                </input>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label">Reminden on</label>
+                <input class="form-control" type="text" ng-model="vm.subscription.paymentReminder1SendOn" my-label="paymentReminder1SendOn"
+                   name="paymentReminder1SendOn" >
+                </input>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label">Reminded again</label>
+                <input class="form-control" type="text" ng-model="vm.subscription.paymentReminder2SendOn" my-label="paymentReminder2SendOn"
+                   name="paymentReminder2SendOn" >
+                </input>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="saveBtn" class="btn btn-primary pull-right ladda-button" ng-click="vm.createOrSaveSubscription()" data-style="expand-left">
+                        <span class="ladda-label"> Speichern </span>
+                    </button>
+                    <button id="cancel" class="btn btn-danger pull-right ladda-button" ng-click="vm.cancel()" data-style="expand-left">
+                        <span class="ladda-label"> Abbrechen</span>
+                    </button>
+                </div>
+            </div>
+
+
+    </form>
+  </div> <!-- pannel body -->
+
+  </div>
+ </div>
+</div>

@@ -1,0 +1,121 @@
+/* 
+
+current color scheme:
+
+    current one: AACC5A, 869958, FFF07D, D6DAFF, 4F7BCC
+        selection: EEE
+
+    B2A260, FFE268, FFDD52, 4448B2, F9F9FF
+
+    90CC67, 8A9980, FFFB6F, E9E5FF, E9E5FF
+*/
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+
+.navbar-default {
+    /*background-image: linear-gradient(to bottom, #FFF 0, #f7fff9 100%);*/
+    background-color: rgba(255, 240, 125, 0.46)/*#FFF07D*/
+    ;
+    border-color: #e7e7e7;
+    height: auto;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #EEE;
+}
+
+.jumbotron {
+    background-color: #FDEDBE;
+}
+
+.btn-primary {
+    color: #fff;
+    /*background-color: #4F7BCC;*/
+    background-color: #AACC5A;
+    border-color: #ACCE5F;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:hover {
+    color: #fff;
+    /*background-color: #4F7BCC;*/
+    background-color: #869958;
+    border-color: #889A5A;
+}
+
+
+/*    clicked state       */
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #fff;
+    background-color: #758E3C;
+    border-color: #77903E;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: #899B5A;
+    border-color: #8A9D5C;
+}
+
+
+/*   breadcrumbs   */
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #FbFbFb;
+    border-radius: 4px;
+    border-bottom: 1px solid #EEE;
+}
+
+.breadcrumb > li {
+    display: inline-block;
+}
+
+.breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+
+.breadcrumb > .active {
+    color: #777;
+}

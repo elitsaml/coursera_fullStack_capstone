@@ -1,0 +1,26 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongoDb": {
+    "host": "ds015995.mlab.com",
+    "port": 15995,
+    "url": "mongodb://usrname:pass015995.mlab.com:15995/schrebe_garten",
+    "database": "schrebe",
+    "password": "",
+    "name": "mongoDb",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "mongoDb_Local": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "mongodb://127.0.0.1:27017/schrebe_garten",
+    "database": "schrebe_garten",
+    "password": "",
+    "name": "mongoDb_Local",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

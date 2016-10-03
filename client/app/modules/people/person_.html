@@ -1,0 +1,79 @@
+<div>
+    <ul class="breadcrumb">
+        <li><a ui-sref="app">Home</a>
+        </li>
+        <li><a ui-sref="app.plots">Plots</a>
+        </li>
+        <li class="active">{{vm.plot.registryNumber}}</li>
+    </ul>
+</div>
+
+<div class="conteiner">
+  <div class="content_conteiner">
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+     <h3 class="panel-title">Plot data</h3>
+   </div>
+   <div class="panel-body">
+
+     <form name="vm.pForm" id="pForm" novalidate>
+
+            <div class="form-group col-md-12">
+                <label class="control-label">Registry Number</label>
+                <input class="form-control" type="text" ng-model="vm.plot.registryNumber" my-label="Registry Number"
+                  required="true" name="registryNumber" placeholder="Geben der Registraturnummer an" >
+                </input>
+            </div>
+
+            <div class="form-group col-md-12">
+                <label class="control-label">Comment</label>
+                <input class="form-control" type="text" ng-model="vm.plot.comment" my-label="Comment"
+                  required="false" name="comment" placeholder="Geben der Commentar an" >
+                </input>
+            </div>
+            <div class="form-group col-md-3">
+                <label class="control-label">Latitude 1</label>
+                <input class="form-control" type="text" ng-model="vm.plot.lat1" my-label="Latitude 1"
+                  required="true" name="lat1" placeholder="Geben die erste Latitude an" >
+                </input>
+            </div>
+            <div class="form-group col-md-3">
+                <label class="control-label">Longitute 1</label>
+                <input class="form-control" type="text" ng-model="vm.plot.long1" my-label="Longitute 1"
+                  required="true" name="long1" placeholder="Geben die erste Longitute an" >
+                </input>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label class="control-label">Latitude 2</label>
+                <input class="form-control" type="text" ng-model="vm.plot.lat2" my-label="Latitude 2"
+                  required="true" name="lat2" placeholder="Geben die zweite Latitude an" >
+                </input>
+            </div>
+            <div class="form-group col-md-3">
+                <label class="control-label">Longitute 1</label>
+                <input class="form-control" type="text" ng-model="vm.plot.long2" my-label="Longitute 2"
+                  required="true" name="long2" placeholder="Geben die zweite Longitute an" >
+                </input>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="saveBtn" class="btn btn-primary pull-right ladda-button" ng-click="vm.save()" data-style="expand-left">
+                        <span class="ladda-label"> Speichern </span>
+                    </button>
+                    <button id="cancel" class="btn btn-danger pull-right ladda-button" ng-click="vm.cancel()" data-style="expand-left">
+                        <span class="ladda-label"> Abbrechen</span>
+                    </button>
+                </div>
+            </div>
+
+
+    </form>
+  </div> <!-- pannel body -->
+
+  </div>
+ </div>
+</div>

@@ -1,0 +1,38 @@
+{
+  "name": "Message",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "to": {
+      "type": "string",
+      "required": false
+    },
+    "from": {
+      "type": "string",
+      "required": true
+    },
+    "deliveredOn": {
+      "type": "date"
+    },
+    "readOn": {
+      "type": "date"
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "person": {
+      "type": "belongsTo",
+      "model": "Person",
+      "foreignKey": "personId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,47 @@
+Schrebe Garten project:
+-----------------------
+
+Require:
+--------
+
+- bootstrap
+- grunt
+- nodejs
+- bower
+
+How to develop:
+---------------
+- create a directory for the project and go into it
+git init
+git remote add origin https://elitsa_mladenova@bitbucket.org/elitsa_mladenova/schrebe_garten.git
+...
+git commit -m '... your commit message'
+git push -u origin master
+
+What to intall:
+---------------
+sudo npm install -g n
+sudo n stable
+
+sudo npm install -g grunt-cli bower yo generator-karma generator-angular generator-bootstrap generator-h5bp
+
+
+
+Everyday work:
+--------------
+To see the local YO generators:
+   npm search yeoman-generator
+
+
+To start a new project from scraptch:
+-------------------------------------
+yo bootstrap
+    or:
+    yo bootstrap:app
+
+
+IDE:
+----
+download Brackets for Linux/ Ubuntu
+install extentions: File -> Extention Manager...
+    butify, bootstrap, angular
